@@ -80,3 +80,8 @@ class Database:
             }
         except Exception as e:
             return {"status": "error", "message": str(e)}
+def get_db():
+    return Database.get_db()
+
+def seed_default_prompts(db=None):
+    Database.seed_default_prompts()
